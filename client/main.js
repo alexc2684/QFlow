@@ -3,20 +3,13 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 import './main.html';
 
-Template.hello.onCreated(function helloOnCreated() {
-  // counter starts at 0
-  this.counter = new ReactiveVar(0);
-});
-
-Template.hello.helpers({
-  counter() {
-    return Template.instance().counter.get();
-  },
-});
-
-Template.hello.events({
-  'click button'(event, instance) {
-    // increment the counter when button is clicked
-    instance.counter.set(instance.counter.get() + 1);
-  },
-});
+// var SC = require('soundcloud');
+//
+// SC.initialize({
+//   client_id: 'e49030affa62a819457ef0404ebee1b6';
+// });
+//
+// var track_url = 'https://soundcloud.com/alex-chan-27/kanye-west-mercy';
+// SC.oEmbed(track_url, { auto_play: true }).then(function(oEmbed) {
+//   console.log('oEmbed response: ', oEmbed);
+// });
