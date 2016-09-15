@@ -13,3 +13,14 @@ import './main.html';
 // SC.oEmbed(track_url, { auto_play: true }).then(function(oEmbed) {
 //   console.log('oEmbed response: ', oEmbed);
 // });
+
+Template.Home.events({
+  'click #newroom': function() {
+    Router.go('/play');
+  }
+});
+
+//var queue = []
+//insert some node (media type, media ID, any other info)
+//if certain type, load that type
+//when current instance ends, pull from queue 
