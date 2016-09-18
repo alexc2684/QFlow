@@ -23,4 +23,4 @@ Template.Home.events({
 //var queue = []
 //insert some node (media type, media ID, any other info)
 //if certain type, load that type
-//when current instance ends, pull from queue 
+//when current instance ends, pull from queue

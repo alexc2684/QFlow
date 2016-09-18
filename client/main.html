@@ -3,6 +3,8 @@
 </head>
 
 <body>
+{{> main}}
+<br /><br />
 {{Home}}
 </body>
 <template name="Home">
@@ -13,5 +15,30 @@
 
     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
 
+
+</template>
+
+<template name="main">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div id="nav" class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a id="logo" class="navbar-brand" href="/"> <img src="/images/Icons_Logos/PCG Icon 16pt 062416 v4.png" height=32/> </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+
+          </ul>
+        </div>
+      </div>
+    </nav>
 
 </template>
