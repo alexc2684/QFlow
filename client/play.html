@@ -8,6 +8,7 @@
 
   <script>
     var tag = document.createElement('script');
+    var queue = [];
 
     tag.src = "https://www.youtube.com/iframe_api";
     var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -44,15 +45,22 @@
     function stopVideo() {
       player.stopVideo();
     }
-
-    SC.initialize({
-      client_id: 'e49030affa62a819457ef0404ebee1b6'
-    });
-
-    var track_url = 'http://soundcloud.com/forss/flickermood';
-    SC.oEmbed(track_url, { auto_play: true }).then(function(oEmbed) {
-      console.log('oEmbed response: ', oEmbed);
-    });
+    //
+    // SC.initialize({
+    //   client_id: 'e49030affa62a819457ef0404ebee1b6'
+    // });
+    //
+    // var track_url = 'http://soundcloud.com/forss/flickermood';
+    // SC.oEmbed(track_url, { auto_play: true }).then(function(oEmbed) {
+    //   console.log('oEmbed response: ', oEmbed);
+    // });
+    function queueVideo(sourceType, videoId) {
+      if (sourceType == "youtube") {
+        queue.push(videoId);
+      } else if (sourceType == "soundcloud") {
+        queue.push(videoId);
+      }
+    }
   </script>
 
 </template>
